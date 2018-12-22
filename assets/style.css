@@ -1,0 +1,249 @@
+:root {
+    --color-texto:#000;
+    --color-fondo:#FFF;
+    --color-sergio: #81BEF9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+body .banner {
+    margin-left: 0;
+    margin-top: 1px;
+    height: 11rem;
+    background-color: var(--color-sergio);
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid  var(--color-texto);
+    display: block;
+  }
+
+body header .banner h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    padding-top: 1rem;
+}
+
+body header .banner h2 {
+    padding-top: 2px;
+    font-size: 1.2rem;
+    font-weight: 200;
+    letter-spacing: 20px;
+}
+
+body header .banner .social {
+    margin-top: 20px;
+}
+
+body header .banner .social a{
+    width: 55px;
+    height: 55px;
+    margin: 5px;
+}
+
+body header .banner .social a i {
+    font-size: 20px;
+    border-radius: 100px;
+    border: 2px solid #000;
+    color: #000;
+    width: 35px;
+    height: 35px;
+    line-height: 32px;
+    margin: 0 2px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+  }
+
+body header .menu {
+    background-color: #FFF;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid  var(--color-texto);
+  }
+
+  body header .menu.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: unset;
+}
+
+body  header .menu li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0 1.5em;
+  }
+
+ body header .menu a {
+    padding: 0.2em 0;
+    color: var(--color-texto)
+    display: inline-block;
+    letter-spacing: 1px;
+    margin: 0;
+    text-decoration: none;
+  }
+
+body header .menu li:hover {
+    color: var(--color-sergio);
+    font-weight: bolder;
+}
+
+main {
+    border: 1px solid  var(--color-texto);
+  }
+
+main section {
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    padding: 0.5rem 0 0.5rem 0;
+   font-family: "Tenor Sans";
+   background-color: var(--color-sergio);
+   color: white;
+   font-size:2rem;
+   vertical-align: middle;
+   text-align: center;
+}
+
+.portada-header {
+    background: 
+    linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.5)),/* the gradient on top, adjust color and opacity to your taste */
+    url('../assets/img/portada.jpg');
+    min-height: 70vh;
+}
+
+.portada-header h2{
+    color: white;
+}
+
+.portada-header p {
+    padding-top: 2rem;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.volver {
+    display: block;
+    width:100%;
+    text-align:center;
+    padding-bottom: 2rem;
+    text-decoration: none;
+}
+.volver a, a:visited,  a:hover, a:active{
+    color: var(--color-sergio);
+    text-decoration: none;
+}  
+
+.wrapperText {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+body main section article p {
+    text-align: center;
+}
+
+.estudios, .experiencia{
+    padding-top:1rem;
+    text-align:center;
+}
+
+.estudios li,  .experiencia li{
+    padding-top:1rem;
+    text-indent: -1em;
+}
+
+.title {
+    color: var(--color-sergio);
+
+}
+
+video {
+    display: block;
+    margin: 0 auto;
+}
+
+.contacto {
+    display: inline;
+	padding:25px;
+    margin:50px 0;
+    text-align: center;
+}
+
+.contacto h3 {
+	color:var(--color-sergio);
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.contacto h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+fieldset {
+	border: none;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+.contacto input[type="text"], .contacto input[type="email"], 
+.contacto input[type="tel"], .contacto textarea, .contacto select {
+	width:50%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+
+.contacto textarea {
+	height:6rem;
+	max-width:100%;
+    resize:none;
+}
+
+.contacto select {
+    -webkit-appearance: menulist-button;
+    height: 2rem;
+}
+
+.contacto button[type="submit"] {
+	width:50%;
+	border:none;
+	background:var(--color-sergio);
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+    font-size:15px;
+    text-transform: uppercase;
+
+}
+
+
+footer p {
+    text-align: center;
+    padding-top: 0.2rem;
+    padding-bottom: 0.5rem;
+}
