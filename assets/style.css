@@ -67,10 +67,14 @@ body header .banner .social a i {
 
 body header .menu {
     background-color: #FFF;
-    padding: 15px;
+    padding: 1px;
     text-align: center;
     text-transform: uppercase;
-    border: 1px solid  var(--color-texto);
+    border: 1px solid  #FFF);
+  }
+
+  body header .menu ul {
+    border-left: 1px solid  #FFF);
   }
 
   body header .menu.fixed {
@@ -78,13 +82,32 @@ body header .menu {
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: unset;
 }
 
-body  header .menu li {
+body header .menu li {
     display: inline-block;
     list-style: outside none none;
     margin: 0 1.5em;
+  }
+
+
+ .mobile {
+    display: block;
+    list-style: outside none none;
+    margin: 0 1.5em;
+  }
+
+  .MenuMobile {
+   display:block;
+   font-size: 1.5em;
+  }
+
+  .encendido {
+    display:initial !important;
+  }
+
+  .apagado {
+    display:none !important ;
   }
 
  body header .menu a {
@@ -99,6 +122,36 @@ body  header .menu li {
 body header .menu li:hover {
     color: var(--color-sergio);
     font-weight: bolder;
+}
+
+nav.mobile {
+    background-color: #FFF;
+    font-size: 2rem;
+    cursor: pointer;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    padding-right: 1rem;
+}
+
+nav.mobile i {
+   float:right;
+}
+
+nav.menu {
+   display:none;
+}
+
+.menuMobile {
+    display:none;
+ }
+
+@media screen and (min-width: 900px) {
+    nav.mobile {
+        display: none;
+    }
+    nav.menu {
+        display: initial;
+    }
 }
 
 main {
