@@ -15,6 +15,7 @@ body {
 }
 
 body .banner {
+    transition: 0.5s;
     margin-left: 0;
     margin-top: 1px;
     height: 11rem;
@@ -25,13 +26,22 @@ body .banner {
     display: block;
   }
 
+  @keyframes inicio {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
 body header .banner h1 {
+    animation-name: inicio;
+    animation-duration: 4s;
     font-size: 2.5rem;
     margin: 0;
     padding-top: 1rem;
 }
 
 body header .banner h2 {
+    animation-name: inicio;
+    animation-duration: 4s;
     padding-top: 2px;
     font-size: 1.2rem;
     font-weight: 200;
@@ -70,25 +80,23 @@ body header .menu {
     padding: 1px;
     text-align: center;
     text-transform: uppercase;
-    border: 1px solid  #FFF);
   }
 
-  body header .menu ul {
-    border-left: 1px solid  #FFF);
-  }
 
   body header .menu.fixed {
 	position: fixed;
 	top: 0;
 	left: 0;
-	right: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 10;
 }
 
 body header .menu li {
     display: inline-block;
     list-style: outside none none;
     margin: 0 1.5em;
-  }
+}
 
 
  .mobile {
@@ -145,14 +153,6 @@ nav.menu {
     display:none;
  }
 
-@media screen and (min-width: 900px) {
-    nav.mobile {
-        display: none;
-    }
-    nav.menu {
-        display: initial;
-    }
-}
 
 main {
     border: 1px solid  var(--color-texto);
@@ -189,6 +189,7 @@ section h2 {
     text-align: center;
     font-size: 1.5rem;
 }
+
 
 .volver {
     display: block;
@@ -267,7 +268,8 @@ fieldset {
 	border:1px solid #CCC;
 	background:#FFF;
 	margin:0 0 5px;
-	padding:10px;
+    padding:10px;
+    font-size: 1rem;
 }
 
 
@@ -291,12 +293,41 @@ fieldset {
 	padding:10px;
     font-size:15px;
     text-transform: uppercase;
-
+    font-size: 1rem;
 }
 
 
 footer p {
     text-align: center;
     padding-top: 0.2rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+
+@media screen and (min-width: 960px) {
+
+    body header .menu li {
+        display: inline !important;
+    }
+
+    nav.mobile {
+        display: none;
+    }
+    nav.menu {
+        display: inline;
+        background-color: #FFF;
+        padding: 1px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1em;
+        position fixed;
+    }
+    nav.menu ul li {
+        display: inline;
+    } 
+
+    .MenuMobile {
+        display:initial !important;
+    }
+
 }

@@ -3,6 +3,8 @@
  document.addEventListener('DOMContentLoaded', app)
 
 function app() {
+    
+    window.scrollTo(0, 0);
 
     let menu = document.querySelector('.menu');
     let menuMobile = document.querySelector('.menuMobile');
@@ -23,7 +25,6 @@ function app() {
             menu.classList.add('encendido');
         }
 
-
       } else {
          // Si no tiene el menu mobile
         menu.classList.add('MenuMobile');
@@ -38,9 +39,64 @@ function app() {
       }
     };
 
+    let select = document.querySelector('select[name="selector"]');
+    select.addEventListener('change',function(e){
+       if (e.target.value == "otro") {
+            let br = document.createElement("br");
+            let input = document.createElement("input");
+            input.type = "text";
+            input.placeholder = "Cuentame entonces como me has conocido..."
+            select.parentNode.insertBefore(br, select.nextSibling);
+            br.parentNode.insertBefore(input, br.nextSibling);
+        }
         
-    //Event para fijar el menu arriba
+    });
+
+
+    //Event para fijar el menu arriba y el ancho (menu)
     window.addEventListener('scroll', fixMenu);
+    document.querySelector('form').addEventListener('submit', evento => {
+
+        let emailV = document.querySelector('input[name="email"]');
+        let tlfV = document.querySelector('input[name="telefono"]');
+        let palabras  = document.getElementById("textComment").value; 
+        let numeroP = palabras.split(' ');
+
+        if(numeroP.length > 150) {
+            alert("No se pemiten mas de 150 palabras");
+            evento.preventDefault();
+            return
+         }
+
+         if(!validaEmail(emailV.value)){
+             alert("Email no válido");
+             evento.preventDefault();
+             return
+         }
+
+         if(!validaNumero(tlfV.value)){
+            alert("Numero no válido");
+            evento.preventDefault();
+            return
+        }
+
+        //Si llegamos hasta aqui todo es correo
+        alert("Correo enviado");
+        evento.preventDefault();
+
+        });
+
+        //validamos el email
+        function validaEmail(email) {
+            let reg = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            return reg.test(email);
+        }
+
+        //Validamos el tlf
+        function validaNumero(numero) {
+            let reg = /^\d+$/;
+            return reg.test(numero);
+          }
 
     //Funcion para fijar el menu arriba (Ojo si tiene el menu mobile no lo hago)
     function fixMenu(e) {
@@ -52,7 +108,7 @@ function app() {
 			menu.classList.remove('fixed');
 		}
 	}
-	
+    
 
     //Funcion para hacer el Smooth Scroll
     document.querySelectorAll('a[href~="#"]').forEach(enlace => { //Por cada link con el href y el #

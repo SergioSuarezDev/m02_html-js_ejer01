@@ -104,7 +104,7 @@
                             <span class="title">2016/2018</span> - <strong>CIS21</strong> (Valladolid)<br/>
                         </li>
                         <li>
-                            <span class="title">2015/2016</span> - <strong></strong>Hermanas Hospitalarias</strong> (Valladolid)<br/>
+                            <span class="title">2015/2016</span> - <strong>Hermanas Hospitalarias</strong> (Valladolid)<br/>
                         </li>                    
                         <li>
                             <span class="title">2013/2015</span> - <strong>Freelance</strong> (Valladolid)<br/>
@@ -153,13 +153,13 @@
                 <p>Puedes contactar conmigo desde el siguiente formulario:</p>
                 <form class="contacto" action="" method="post">                       
                     <fieldset>
-                        <input placeholder="Tu Nombre" type="text" tabindex="1" required autofocus>
+                        <input placeholder="Tu Nombre" type="text" tabindex="1" required >
                     </fieldset>
                     <fieldset>
-                         <input placeholder="Tu Email" type="email" tabindex="2" required>
+                         <input name="email" placeholder="Tu Email" type="email" tabindex="2" required>
                     </fieldset>
                     <fieldset>
-                        <select tabindex="3" required >
+                        <select  name="selector" tabindex="3" required >
                             <option value="">Como me has conocido</option>
                             <option value="internet">Por Internet</option>
                             <option value="clase">En clase</option>
@@ -168,10 +168,10 @@
                             </select>
                     </fieldset>
                     <fieldset>
-                            <input placeholder="Tu Teléfono" type="tel" tabindex="4" required>
-                        </fieldset>
+                            <input name="telefono" placeholder="Tu Teléfono" type="tel" tabindex="4" required>
+                    </fieldset>
                     <fieldset>
-                        <textarea placeholder="Envía tu mensaje...." tabindex="5" required></textarea>
+                        <textarea id="textComment" placeholder="Envía tu mensaje...." tabindex="5" required></textarea>
                     </fieldset>
                     <fieldset>
                         <button name="submit" type="submit" data-submit="...Enviando">Enviar</button>
