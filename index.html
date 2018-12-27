@@ -151,12 +151,13 @@
                     <span class="volver"><a href=#>Volver</a></span>
                 </header>
                 <p>Puedes contactar conmigo desde el siguiente formulario:</p>
-                <form class="contacto" action="" method="post">                       
+                <form class="contacto" action="" method="post">
                     <fieldset>
                         <input placeholder="Tu Nombre" type="text" tabindex="1" required >
                     </fieldset>
                     <fieldset>
-                         <input name="email" placeholder="Tu Email" type="email" tabindex="2" required>
+                         <input name="email" placeholder="Tu Email" type="email" 
+                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" tabindex="2" required>
                     </fieldset>
                     <fieldset>
                         <select  name="selector" tabindex="3" required >
@@ -168,11 +169,14 @@
                             </select>
                     </fieldset>
                     <fieldset>
-                            <input name="telefono" placeholder="Tu Teléfono" type="tel" tabindex="4" required>
+                            <input name="telefono" placeholder="Tu Teléfono" type="tel" pattern="[0-9]{9}" tabindex="4" required>
                     </fieldset>
                     <fieldset>
                         <textarea id="textComment" placeholder="Envía tu mensaje...." tabindex="5" required></textarea>
                     </fieldset>
+                    <fieldset>
+                            <span class="error"></span>                     
+                        </fieldset>
                     <fieldset>
                         <button name="submit" type="submit" data-submit="...Enviando">Enviar</button>
                      </fieldset>
