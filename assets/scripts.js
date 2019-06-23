@@ -11,6 +11,7 @@ function app() {
     let menuMobile = document.querySelector('.menuMobile');
     let menutop = menu.offsetTop;
     let iconoMobile = document.getElementById('iconMenu');
+    let iconoMobile = document.getElementById('iconMenu');
 
     //Select para la opcion de "otros" en el select del formulario
     let select = document.querySelector('select[name="selector"]');
@@ -76,8 +77,8 @@ function app() {
 
         //Error para mas de 150 palabras en textarea
         if(numeroP.length > 150) {
-            errorSpan.innerHTML = 'Error, no se permiten mas de 150 palabras, por favor revise el contenido.';
             evento.preventDefault();
+            errorSpan.innerHTML = 'Error, no se permiten mas de 150 palabras, por favor revise el contenido.';
             return
          }
 
